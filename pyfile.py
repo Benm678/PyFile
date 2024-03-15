@@ -288,9 +288,9 @@ def generate_lists_clicked():
 
 
 def open_the_csv():
-    if os.path.getsize(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "Duplicates.csv")) != 0:
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "Duplicates.csv")) != 0:
         os.startfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "Duplicates.csv"))
-    if os.path.getsize(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "UniqueFiles.csv")) != 0:
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "UniqueFiles.csv")) != 0:
         os.startfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "UniqueFiles.csv"))
 
 
