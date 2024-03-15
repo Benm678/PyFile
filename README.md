@@ -1,6 +1,8 @@
 # PyFile
 A simple app to aid in managing backups of files. 
+
 Over the past (many) few years each time I have upgraded computers, or added new drives I have ended up with a number of compounded file structures - with many files having multiple levels of duplication. 
+
 I wanted a simple way to get a list of all files and all duplicates on a given file path. 
 Once opened, select the Generate File Listing option, then select the folder you are interested in. Then Generate Lists. 
 Two lists are created, one is Duplicates.csv, the other is UniqueFiles.csv. 
