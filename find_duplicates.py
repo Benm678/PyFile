@@ -50,6 +50,9 @@ def generate_duplicates(start_path):
     start_path = os.path.normpath(start_path)
     duplicates = find_duplicate_files(start_path)
 
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "Duplicates.csv")):
+        os.remove(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "Duplicates.csv"))
+    
     if duplicates:
         write_to_csv(duplicates)
         print("\nDuplicate files information written to Duplicates.csv.")

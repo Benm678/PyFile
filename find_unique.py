@@ -48,6 +48,9 @@ def generate_unique(start_path):
     start_path = os.path.normpath(start_path)
     unique_files = find_unique_files(start_path)
 
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "UniqueFiles.csv")):
+        os.remove(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "UniqueFiles.csv"))
+
     if unique_files:
         write_to_csv(unique_files)
         print("\nUnique files information written to UniqueFiles.csv.                                                          ") 
